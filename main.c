@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int inc(int counter);
+void f(void);
+
 
 int main(void)
 {
-	int i = 10;
-	
-	printf("before function call i = %d\n", i);
-	i = inc(i);
-	printf("after function call i = %d\n", i);
-	
+	int i;
+	for(i=0; i<5; i++)
+	{
+		f();
+	}
+		
 	return 0;
 }
 
-int inc(int counter)
+void f(void)
 {
-	counter++;
-	return counter;
+	int i;
+	for(i=0; i<10; i++)
+		printf("#");
 }
+
